@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>alvin lou homework/9</title>
+
+<link rel="stylesheet" href="hw9.css">
+
+<script>
+
+var timergrow;
+
+function bannerGrow(){
+   timergrow = setInterval("grow()",20);
+  }
+
+  function grow() {
+   if ( document.getElementById('banner').width <= 445)
+    document.getElementById('banner').width++;
+   if (document.getElementById('banner').height <= 69)
+   document.getElementById('banner').height++;
+  }
+
+function stopInt()
+{
+clearInterval(timergrow)
+}
+
+</script>
+
+<script type="text/javascript">
+
+function setColor(colorstr) {
+
+  if (colorstr != "white" && colorstr != "#ffffff")
+     document.bgColor = colorstr;
+}
+
+</script>
+
+<script type="text/javascript">
+
+function MsgBox(textstring)  {
+
+if (textstring == "yes" || textstring == "YES")
+	{
+	alert ("Simplicity in your lifestyle will ensure you a happy life.");
+	}
+
+	else if (textstring == "no" || textstring == "NO")
+	{
+	alert ("Please enjoy the rest of your day.");
+
+	}
+	else
+	{
+	alert ("Please enter yes or no in the textbox.");
+	}
+
+     }
+</script>
+
+<script type="text/javascript">
+
+ function surfto(form) {
+        var myindex=form.dest.selectedIndex
+        location=form.dest.options[myindex].value;
+}
+
+</script>
+
+<script type="text/javascript">
+
+function new_window(url) {
+
+link = 
+window.open(url,
+'_new', 'toolbar=0,menubar=0,scrollbars=0,status=1,resizable=1,top=1,left=150,fullscreen=0,Height=400px,Width=400px', '')
+
+}
+</script>
+
+</head>
+
+<body bgcolor="#00ffae" onload="bannerGrow();" onunload="stopInt();">
+
+<header>
+<a href="index.html"><img id="banner" src="banner.png" width="1" height="1" alt="alvin lou @ ccsf/home" title="alvin lou @ ccsf/home"></a>
+</header>
+
+<div>
+<nav>
+<a href="index.html">hw1</a> .
+<a href="homework2.html">hw 2</a> .
+<a href="inline.html">hw3</a> .
+<a href="homework4.html">hw4</a> .
+<a href="homework5.html">hw5</a> .
+<a href="homework6.html">hw6</a> .
+<a href="homework7.html">hw7</a> .
+<a href="homework8.html">hw8</a> .
+hw9
+</nav>
+</div>
+
+<div>
+<p>
+<table cellspacing="0">
+<tr>
+<td bgcolor="#00ffae"><A href="javascript:void(0)" onMouseover="setColor('#00ffae')"><Img src="cleardot.gif" height="5" width="25" border=0></a></td>
+<td bgcolor="#5470aa"><A href="javascript:void(0)" onMouseover="setColor('#5470aa')"><Img src="cleardot.gif" height="5" width="25" border=0></a></td>
+<td bgcolor="#fff8b9"><A href="javascript:void(0)" onMouseover="setColor('#fff8b9')"><Img src="cleardot.gif" height="5" width="25" border=0></a></td>
+<td bgcolor="#ccffcc"><A href="javascript:void(0)" onMouseover="setColor('#ccffcc')"><Img src="cleardot.gif" height="5" width="25" border=0></a></td>
+<td bgcolor="#e9967a"><A href="javascript:void(0)" onMouseover="setColor('#e9967a')"><Img src="cleardot.gif" height="5" width="25" border=0></a></td>
+<td bgcolor="#ccffff"><A href="javascript:void(0)" onMouseover="setColor('#ccffff')"><Img src="cleardot.gif" height="5" width="25" border=0></a></td>
+<td bgcolor="#ccccff"><A href="javascript:void(0)" onMouseover="setColor('#ccccff')"><Img src="cleardot.gif" height="5" width="25" border=0></a></td>
+<td bgcolor="#ffff00"><A href="javascript:void(0)" onMouseover="setColor('#ffff00')"><Img src="cleardot.gif" height="5" width="25" border=0></a></td>
+<td bgcolor="#99ff33"><A href="javascript:void(0)" onMouseover="setColor('#99ff33')"><Img src="cleardot.gif" height="5" width="25" border=0></a></td>
+</tr>
+</table>
+</p>
+</div>
+
+<div>
+<h1>javascript</h1>
+</div>
+<div>
+<p>
+<form>
+what do you want to eat?
+<br>
+<select name="dest" size="1">
+<option selected="selected" value="#">*** what to eat? ***
+    <option VALUE="http://www.pandaexpress.com">chinese food
+    <option VALUE="http://www.chipotle.com">burritos
+    <option VALUE="http://in-n-out.com">burgers
+  </select>
+<input type="button" value="hungry yet?" onClick="surfto(this.form)">
+</form>
+</p>
+</div>
+
+<div>
+<p>
+<a href="#" onClick="alert('Sing and rejoice, fortune is smiling on you.');" onmouseover='rollover.src="openfortunecookie.jpg"' onmouseout='rollover.src="fortunecookie.jpg"'><img src="fortunecookie.jpg" name="rollover" height="100" width="100" alt="fortunecookie" title="fortunecookie"></a>
+<br>
+you get a cookie with your meal.
+</p>
+</div>
+
+<div>
+<p>
+<form>
+did you want another fortune?
+<br>
+type yes or no and call your server.
+<input name="newfortune" type="text" size="5">
+<input name="submit" type="button" value="notify server" onClick="MsgBox(form.newfortune.value)">
+</form>
+</p>
+</div>
+
+<div>
+<p>
+<a href="javascript:new_window('homework9check.html')" title="popup">get the check</a>
+</p>
+</div>
+
+<div>
+<p>
+<a href="homework9password.html">pay the bill</a>
+</p>
+</div>
+
+<footer>
+
+<nav>
+<a href="#">top</a> .
+<a href="../index.html">cnit133</a> .
+<a href="index.html">cnit132</a> .
+<a href="pictures.html">pictures</a> .
+<a href="sfusd.html">sfusd responses</a> .
+<a href="mailto:alou1@mail.ccsf.edu">email</a>
+</nav>
+
+<p>
+<script type="text/javascript">
+var dateModified = document.lastModified;
+mydate = dateModified.slice(0,16);
+document.write("Last updated: " + mydate);
+</script>
+<a href="http://validator.w3.org/check?uri=referer"><img src="html5.png" height="32" width="32" alt="html5 validate me" title="html5 validate me"></a>
+<a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">
+<img src="css3.png" height="32" width="32" alt="css3 validate me" title="css3 validate me"></a>
+</p>
+
+</footer>
+
+</body>
+
+</html>

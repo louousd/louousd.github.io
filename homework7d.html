@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>
+    alvin lou homework7/part4
+  </title>
+  <link rel="stylesheet" href="main.css">
+  <style>
+    #navigation ul, #navigation li {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    #navigation a {
+      background-color: white;
+      text-align: center;
+      border: 1px solid #000000;
+    }
+    #navigation a:hover {
+      background-color: black;
+    }
+  </style>
+  <script src="http://code.jquery.com/jquery-1.10.1.js"></script>
+  <script src="http://fog.ccsf.cc.ca.us/~srubin/nav1.1.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#navigation").navPlugin({
+        'itemWidth': 150,
+        'itemHeight': 30,
+        'navEffect': "slide",
+        'speed': 250
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="cnit132/banner.png" width="445" height="69" alt="alvin lou @ ccsf/home" title="alvin lou @ ccsf/home"></a>
+  </header>
+  <div>
+    <ul id="navigation">
+      <li><a href="homework1.html">homework 1</a></li>
+      <li><a href="homework2.html">homework 2</a>
+        <ul>
+          <li><a href="homework2a.html">part 1</a></li>
+          <li><a href="homework2b.html">part 2</a></li>
+          <li><a href="homework2c.html">part 3</a></li>
+          <li><a href="homework2d.html">part 4</a></li>
+        </ul>
+      </li>
+      <li><a href="homework3.html">homework 3</a>
+        <ul>
+          <li><a href="homework3a.html">part 1</a></li>
+          <li><a href="homework3b.html">part 2</a></li>
+          <li><a href="homework3c.html">part 3</a></li>
+          <li><a href="homework3d.html">part 4</a></li>
+          <li><a href="homework3e.html">part 5</a></li>
+          <li><a href="homework3f.html">part 6</a></li>
+        </ul>
+      </li>
+      <li><a href="homework4.html">homework 4</a>
+        <ul>
+          <li><a href="homework4a.html">part 1</a></li>
+          <li><a href="homework4b.html">part 2</a></li>
+          <li><a href="homework4c.html">part 3</a></li>
+          <li><a href="homework4d.html">part 4</a></li>
+          <li><a href="homework4e.html">part 5</a></li>
+          <li><a href="homework4f.html">part 6</a></li>
+        </ul>
+      </li>
+      <li><a href="homework5.html">homework 5</a></li>
+      <li><a href="homework6.html">homework 6</a></li>
+      <li><a href="homework7.html">homework 7</a>
+        <ul>
+          <li><a href="homework7a.html">part 1</a></li>
+          <li><a href="homework7b.html">part 2</a></li>
+          <li><a href="homework7c.html">part 3</a></li>
+          <li><a href="homework7d.html">part 4</a></li>
+        </ul>
+      </li>
+      <li><a href="homework8.html">homework 8</a></li>
+    </ul>
+  </div><br><br>
+  <section>
+    <h1>
+      navigation menu
+    </h1>
+    <p>
+      do you like it?<br>
+      oh i think you like it<br>
+      maybe you should buy it<br>
+      you should probably buy it
+    </p>
+    <p>
+      <a href="homework7.html">back to cover</a>
+    </p>
+  </section>
+  <footer>
+    <nav>
+      <p>
+        <a href="#">top</a> .
+        <a href="index.html">cnit133</a> .
+        <a href="cnit132/index.html">cnit132</a> .
+        <a href="mailto:alou1@mail.ccsf.edu">email</a>
+      </p>
+    </nav>
+    <p>
+      <script type="text/javascript">
+        var dateModified = document.lastModified;
+        mydate = dateModified.slice(0,16);
+        document.write("Last updated: " + mydate);
+      </script>
+      <a href="http://validator.w3.org/check?uri=referer"><img src="cnit132/html5.png" height="32" width="32" alt="html5 validate me" title="html5 validate me"></a>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3"><img src="cnit132/css3.png" height="32" width="32" alt="css3 validate me" title="css3 validate me"></a>
+    </p>
+  </footer>
+</body>
+</html>

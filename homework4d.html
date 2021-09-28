@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>
+    alvin lou homework4/part4
+  </title>
+  <link rel="stylesheet" href="main.css">
+  <style>
+    table, th, td {
+      border: 1px solid #000000;
+      border-collapse: collapse;
+      padding: 2px;
+    }
+    input {
+      text-align: center;
+    }
+    td.bigright {
+      font-weight: bold;
+      text-align: right;
+    }
+  </style>
+  <script>
+    function process() {
+      var quantity1, quantity2, quantity3, quantity4, quantity5, total;
+      quantity1 = parseInt(document.products.quantity1.value);
+      quantity2 = parseInt(document.products.quantity2.value);
+      quantity3 = parseInt(document.products.quantity3.value);
+      quantity4 = parseInt(document.products.quantity4.value);
+      quantity5 = parseInt(document.products.quantity5.value);
+      total = 0;
+      var errMsg = "<span style='font-weight: bold; color: red; '>please enter a valid quantity of items sold</span>";
+
+      if (quantity1 < 0 || quantity2 < 0 || quantity3 < 0 || quantity4 < 0 || quantity5 < 0 || isNaN(quantity1) || isNaN(quantity2) || isNaN(quantity3) ||
+          isNaN(quantity4) || isNaN(quantity5)) {
+        document.getElementById("errMsg").innerHTML = errMsg;
+      }
+      else {
+        for (var i = 0; i < 6; i++) {
+          switch (i) {
+            case 0:
+              total += (quantity1 * 2.98);
+              document.products.amount1.value = (quantity1 * 2.98).toFixed(2);
+              break;
+            case 1:
+              total += (quantity2 * 4.5);
+              document.products.amount2.value = (quantity2 * 4.5).toFixed(2);
+              break;
+            case 2:
+              total += (quantity3 * 9.98);
+              document.products.amount3.value = (quantity3 * 9.98).toFixed(2);
+              break;
+            case 3:
+              total += (quantity4 * 4.49);
+              document.products.amount4.value = (quantity4 * 4.49).toFixed(2);
+              break;
+            case 4:
+              total += (quantity5 * 6.87);
+              document.products.amount5.value = (quantity5 * 6.87).toFixed(2);
+              break;
+            case 5:
+              document.products.total.value = total.toFixed(2);
+              document.getElementById("errMsg").innerHTML = "";
+              break;
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="cnit132/banner.png" width="445" height="69" alt="alvin lou @ ccsf/home" title="alvin lou @ ccsf/home"></a>
+  </header>
+  <nav>
+    <a href="homework1.html">hw1</a> .
+    <a href="homework2.html">hw2</a> .
+    <a href="homework3.html">hw3</a> .
+    hw4 .
+    <a href="homework5.html">hw5</a> .
+    <a href="homework6.html">hw6</a> .
+    <a href="homework7.html">hw7</a> .
+    <a href="homework8.html">hw8</a>
+  </nav>
+  <section>
+    <h1>
+      switch products calculator
+    </h1>
+    <p>
+      enter the quantity of each product sold to calculate
+    </p>
+    <form name="products">
+      <table>
+        <tr>
+          <th>
+            product number
+          </th>
+          <th>
+            quantity sold
+          </th>
+          <th>
+            price
+          </th>
+          <th>
+            profit
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" name="product1" value="1" disabled="disabled">
+          </td>
+          <td>
+            <input type="text" name="quantity1">
+          </td>
+          <td>
+            2.98
+          </td>
+          <td>
+            <input type="text" name="amount1" disabled="disabled">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" name="product2" value="2" disabled="disabled">
+          </td>
+          <td>
+            <input type="text" name="quantity2">
+          </td>
+          <td>
+            4.50
+          </td>
+          <td>
+            <input type="text" name="amount2" disabled="disabled">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" name="product3" value="3" disabled="disabled">
+          </td>
+          <td>
+            <input type="text" name="quantity3">
+          </td>
+          <td>
+            9.98
+          </td>
+          <td>
+            <input type="text" name="amount3" disabled="disabled">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" name="product4" value="4" disabled="disabled">
+          </td>
+          <td>
+            <input type="text" name="quantity4">
+          </td>
+          <td>
+            4.49
+          </td>
+          <td>
+            <input type="text" name="amount4" disabled="disabled">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" name="product5" value="5" disabled="disabled">
+          </td>
+          <td>
+            <input type="text" name="quantity5">
+          </td>
+          <td>
+            6.87
+          </td>
+          <td>
+            <input type="text" name="amount5" disabled="disabled">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="button" value="enter" onclick="process()">
+            <input type="reset" value="clear" onclick="location.reload()">
+          </td>
+          <td class="bigright" colspan="2">
+            total profit
+          </td>
+          <td>
+            <input type="text" name="total" disabled="disabled">
+          </td>
+        </tr>
+      </table>
+    </form>
+    <div id="errMsg"></div>
+    <p>
+      <a href="homework4.html">back to cover</a>
+    </p>
+  </section>
+  <footer>
+    <nav>
+      <p>
+        <a href="#">top</a> .
+        <a href="index.html">cnit133</a> .
+        <a href="cnit132/index.html">cnit132</a> .
+        <a href="mailto:alou1@mail.ccsf.edu">email</a>
+      </p>
+    </nav>
+    <p>
+      <script type="text/javascript">
+        var dateModified = document.lastModified;
+        mydate = dateModified.slice(0,16);
+        document.write("Last updated: " + mydate);
+      </script>
+      <a href="http://validator.w3.org/check?uri=referer"><img src="cnit132/html5.png" height="32" width="32" alt="html5 validate me" title="html5 validate me"></a>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3"><img src="cnit132/css3.png" height="32" width="32" alt="css3 validate me" title="css3 validate me"></a>
+    </p>
+  </footer>
+</body>
+</html>

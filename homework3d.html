@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>
+    alvin lou homework3/part4
+  </title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.10.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script>
+    $(function() {
+      $( "#dialog" ).dialog({
+        autoOpen: false,
+        show: {
+          duration: 1000
+        },
+
+        hide: {
+          duration: 1000
+        }
+      });
+
+      $( "#opener" ).click(function() {
+        $( "#dialog" ).dialog( "open" );
+      });
+    });
+  </script>
+  <script>
+    function process() {
+      var checkNum = document.palin.checkNum.value;
+      var error1 = "<span style='font-weight: bold; color: red;'>please enter only integers</span>";
+      var error2 = "<span style='font-weight: bold; color: red;'>please enter 5 integers</span>";
+      var pal = "<span style='font-weight: bold; color: red;'>" + checkNum + " is a palindrome</span>";
+      var notPal = "<span style='font-weight: bold; color: red;'>" + checkNum + " is not a palindrome</span>";
+
+      if (checkNum == "") {
+        document.getElementById("resultMsg").innerHTML = error2;
+      }
+      else if (isNaN(checkNum)) {
+        document.getElementById("resultMsg").innerHTML = error1;
+      }
+      else if (checkNum.length != 5) {
+        document.getElementById("resultMsg").innerHTML = error2;
+      }
+      else if (checkNum.charAt(0) == checkNum.charAt(4) && checkNum.charAt(1) == checkNum.charAt(3)) {
+        document.getElementById("resultMsg").innerHTML = pal;
+      }
+      else {
+        document.getElementById("resultMsg").innerHTML = notPal;
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="cnit132/banner.png" width="445" height="69" alt="alvin lou @ ccsf/home" title="alvin lou @ ccsf/home"></a>
+  </header>
+  <nav>
+    <a href="homework1.html">hw1</a> .
+    <a href="homework2.html">hw2</a> .
+    hw3 .
+    <a href="homework4.html">hw4</a> .
+    <a href="homework5.html">hw5</a> .
+    <a href="homework6.html">hw6</a> .
+    <a href="homework7.html">hw7</a> .
+    <a href="homework8.html">hw8</a>
+  </nav>
+  <section>
+    <h1>
+      palindrome
+    </h1>
+    <button id="opener">click for instructions</button>
+    <div id="dialog" title="instructions">
+      <p style="font-size: 12px">
+        input a five digit integer (not starting with zero) to display if it is a palindrome, not a palindrome, or an input error
+      </p>
+    </div>
+    <br><br>
+    <form name="palin">
+      enter 5 digit integer <input type="text" name="checkNum" size="8" maxlength="5"><br>
+      <input type="button" value="check" onclick="process()">
+      <input type="reset" value="clear" onclick="location.reload()">
+    </form>
+    <div id="resultMsg"></div>
+    <p>
+      <a href="homework3.html">back to cover</a>
+    </p>
+  </section>
+  <footer>
+    <nav>
+      <p>
+        <a href="#">top</a> .
+        <a href="index.html">cnit133</a> .
+        <a href="cnit132/index.html">cnit132</a> .
+        <a href="mailto:alou1@mail.ccsf.edu">email</a>
+      </p>
+    </nav>
+    <p>
+      <script type="text/javascript">
+        var dateModified = document.lastModified;
+        mydate = dateModified.slice(0,16);
+        document.write("Last updated: " + mydate);
+      </script>
+      <a href="http://validator.w3.org/check?uri=referer"><img src="cnit132/html5.png" height="32" width="32" alt="html5 validate me" title="html5 validate me"></a>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3"><img src="cnit132/css3.png" height="32" width="32" alt="css3 validate me" title="css3 validate me"></a>
+    </p>
+  </footer>
+</body>
+</html>

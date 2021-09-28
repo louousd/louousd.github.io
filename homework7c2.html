@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>
+    alvin lou homework7/part4
+  </title>
+  <link rel="stylesheet" href="main.css">
+  <style>
+    table, th, td {
+      border: 1px solid #000000;
+      border-collapse: collapse;
+      padding: 5px;
+    }
+    .stop {
+      background-color: #ff0000;
+    }
+    .caution {
+      background-color: #ffff00;
+    }
+    .go {
+      background-color: #00ff00;
+    }
+    .teal {
+      background-color: #00ffae;
+    }
+  </style>
+  <script>
+    function bgc(color) {
+      if (color == 1) {
+        document.body.className = "stop";
+      }
+      else if (color == 2) {
+        document.body.className = "caution";
+      }
+      else if (color == 3) {
+        document.body.className = "go";
+      }
+    }
+
+    function teal() {
+      document.body.className = "teal";
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="cnit132/banner.png" width="445" height="69" alt="alvin lou @ ccsf/home" title="alvin lou @ ccsf/home"></a>
+  </header>
+  <nav>
+    <a href="homework1.html">hw1</a> .
+    <a href="homework2.html">hw2</a> .
+    <a href="homework3.html">hw3</a> .
+    <a href="homework4.html">hw4</a> .
+    <a href="homework5.html">hw5</a> .
+    <a href="homework6.html">hw6</a> .
+    hw7 .
+    <a href="homework8.html">hw8</a>
+  </nav>
+  <section>
+    <h1>
+      stop, caution, go
+    </h1>
+    <table>
+      <tr>
+        <td class="stop" onmouseover="bgc(1)" onmouseout="teal()">
+          stop
+        </td>
+        <td class="caution" onmouseover="bgc(2)" onmouseout="teal()">
+          caution
+        </td>
+        <td class="go" onmouseover="bgc(3)" onmouseout="teal()">
+          go
+        </td>
+      </tr>
+    </table>
+    <p>
+      <a href="homework7.html">back to cover</a>
+    </p>
+  </section>
+  <footer>
+    <nav>
+      <p>
+        <a href="#">top</a> .
+        <a href="index.html">cnit133</a> .
+        <a href="cnit132/index.html">cnit132</a> .
+        <a href="mailto:alou1@mail.ccsf.edu">email</a>
+      </p>
+    </nav>
+    <p>
+      <script type="text/javascript">
+        var dateModified = document.lastModified;
+        mydate = dateModified.slice(0,16);
+        document.write("Last updated: " + mydate);
+      </script>
+      <a href="http://validator.w3.org/check?uri=referer"><img src="cnit132/html5.png" height="32" width="32" alt="html5 validate me" title="html5 validate me"></a>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3"><img src="cnit132/css3.png" height="32" width="32" alt="css3 validate me" title="css3 validate me"></a>
+    </p>
+  </footer>
+</body>
+</html>

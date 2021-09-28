@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>
+    alvin lou homework4/part6
+  </title>
+  <link rel="stylesheet" href="main.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      move();
+      $("#anipic").click(function(){
+        move();
+      });
+    });
+
+    function move() {
+      $("#anipic").animate({top: 200}, {duration: 1500});
+      $("#anipic").animate({top: 100}, {duration: 1500});
+      $("#anipic").animate({top: 600}, {duration: 1500});
+      $("#anipic").animate({top: 140}, {duration: 1500});
+      $("#anipic").animate({top: 800}, {duration: 1500});
+      $("#anipic").animate({top: 400}, {duration: 1500});
+      $("#anipic").animate({top: 2000}, {duration: 1500});
+      $("#anipic").animate({top: 140}, {duration: 1500});
+    }
+  </script>
+  <script>
+    function song() {
+      var song = "";
+      var verse = "";
+      for (var i = 1; i <= 12; i++) {
+        var day = "";
+        switch (i) {
+          case 1:
+            day += "first";
+            break;
+          case 2:
+            day += "second";
+            break;
+          case 3:
+            day += "third";
+            break;
+          case 4:
+            day += "fourth";
+            break;
+          case 5:
+            day += "fifth";
+            break;
+          case 6:
+            day += "sixth";
+            break;
+          case 7:
+            day += "seventh";
+            break;
+          case 8:
+            day += "eighth";
+            break;
+          case 9:
+            day += "ninth";
+            break;
+          case 10:
+            day += "tenth";
+            break;
+          case 11:
+            day += "eleventh";
+            break;
+          case 12:
+            day += "twelfth";
+            break;
+        }
+        song += "on the " + day + " of christmas my true love gave to me<br>";
+        for (var v = i; v > 0; v--) {
+          switch (v) {
+            case 1:
+              verse = "and a partridge in a pear tree<p>";
+              break;
+            case 2:
+              verse = "two turtle doves<br>";
+              break;
+            case 3:
+              verse = "three french hens<br>";
+              break;
+            case 4:
+              verse = "four calling birds<br>";
+              break;
+            case 5:
+              verse = "five golden rings<br>";
+              break;
+            case 6:
+              verse = "six geese a laying<br>";
+              break;
+            case 7:
+              verse = "seven swans a swimming<br>";
+              break;
+            case 8:
+              verse = "eight maids a milking<br>";
+              break;
+            case 9:
+              verse = "nine ladies dancing<br>";
+              break;
+            case 10:
+              verse = "ten lords a leaping<br>";
+              break;
+            case 11:
+              verse = "eleven pipers piping<br>";
+              break;
+            case 12:
+              verse = "twelve drummers drumming<br>";
+              break;
+          }
+          if (i == 1) {
+            song += "a partridge in a pear tree<p>";
+          }
+          else {
+            song += verse;
+          }
+        }
+      }
+      return song;
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="cnit132/banner.png" width="445" height="69" alt="alvin lou @ ccsf/home" title="alvin lou @ ccsf/home"></a>
+  </header>
+  <nav>
+    <a href="homework1.html">hw1</a> .
+    <a href="homework2.html">hw2</a> .
+    <a href="homework3.html">hw3</a> .
+    hw4 .
+    <a href="homework5.html">hw5</a> .
+    <a href="homework6.html">hw6</a> .
+    <a href="homework7.html">hw7</a> .
+    <a href="homework8.html">hw8</a>
+  </nav>
+  <section>
+    <h1>
+      twelve days of christmas
+    </h1>
+    <div id="anipic" style="position: absolute; left: 450px; top: 140px;">
+      <img src="cnit132/zimmas.jpg" alt="give now" title="give now">
+    </div>
+    <script>
+      document.write(song());
+    </script>
+    <p>
+      <a href="homework4.html">back to cover</a>
+    </p>
+  </section>
+  <footer>
+    <nav>
+      <p>
+        <a href="#">top</a> .
+        <a href="index.html">cnit133</a> .
+        <a href="cnit132/index.html">cnit132</a> .
+        <a href="mailto:alou1@mail.ccsf.edu">email</a>
+      </p>
+    </nav>
+    <p>
+      <script type="text/javascript">
+        var dateModified = document.lastModified;
+        mydate = dateModified.slice(0,16);
+        document.write("Last updated: " + mydate);
+      </script>
+      <a href="http://validator.w3.org/check?uri=referer"><img src="cnit132/html5.png" height="32" width="32" alt="html5 validate me" title="html5 validate me"></a>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3"><img src="cnit132/css3.png" height="32" width="32" alt="css3 validate me" title="css3 validate me"></a>
+    </p>
+  </footer>
+</body>
+</html>

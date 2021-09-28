@@ -1,0 +1,93 @@
+
+body {
+
+background-color: #00ffae;
+color: #000000;
+
+}
+
+a {
+
+text-decoration: none;
+
+}
+
+a:link {
+
+color: #0000ff;
+
+}
+
+a:active {
+
+color: #ff0000;
+
+}
+
+a:visited {
+
+color: #ae00ff;
+
+}
+
+a:hover {
+
+color: #ff0000;
+
+}
+
+em.foundgif {
+
+margin-left:0px;
+font-style: normal;
+
+}
+
+em.madegif {
+
+margin-left:500px;
+font-style: normal;
+
+}
+
+em.madegifalign {
+
+margin-left:200px;
+font-style: normal;
+
+}
+
+em.wav {
+
+margin-left:0px;
+font-style: normal;
+
+}
+
+em.mp3 {
+
+margin-left:300px;
+font-style: normal;
+
+}
+
+em.mp3align {
+
+margin-left: 30px;
+font-style: normal;
+
+}
+
+em.mid {
+
+margin-left:300px;
+font-style: normal;
+
+}
+
+em.midalign {
+
+margin-left: 30px;
+font-style: normal;
+
+}

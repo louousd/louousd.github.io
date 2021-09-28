@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>
+    alvin lou homework2/part3
+  </title>
+  <link rel="stylesheet" href="main.css">
+  <script src="http://code.jquery.com/jquery-1.10.1.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("textarea").fadeTo("slow",0.25);
+      });
+    });
+  </script>
+  <script>
+    function process() {
+      var n1, n2, n3, n4, n5, nums, neg, pos, zero;
+      n1 = parseInt(document.numbers.num1.value);
+      n2 = parseInt(document.numbers.num2.value);
+      n3 = parseInt(document.numbers.num3.value);
+      n4 = parseInt(document.numbers.num4.value);
+      n5 = parseInt(document.numbers.num5.value);
+      nums = [n1, n2, n3, n4, n5];
+      neg = 0;
+      pos = 0;
+      zero = 0;
+      for (var i = 0; i<nums.length; i++) {
+        if (nums[i] == 0) {
+          zero++;
+        }
+        else if (nums[i] < 0) {
+          neg++
+        }
+        else {
+          pos++
+        }
+      }
+      document.numbers.results.value = ("the numbers you entered are " + n1 + ", " + n2
+        + ", " + n3 + ", " + n4 + ", " + n5 + "\nthere are " + zero + " zeros"
+        + "\nthere are " + neg + " negative numbers" + "\nthere are " + pos + " positive numbers");
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="cnit132/banner.png" width="445" height="69" alt="alvin lou @ ccsf/home" title="alvin lou @ ccsf/home"></a>
+  </header>
+  <nav>
+    <a href="homework1.html">hw1</a> .
+    hw2 .
+    <a href="homework3.html">hw3</a> .
+    <a href="homework4.html">hw4</a> .
+    <a href="homework5.html">hw5</a> .
+    <a href="homework6.html">hw6</a> .
+    <a href="homework7.html">hw7</a> .
+    <a href="homework8.html">hw8</a>
+  </nav>
+  <section>
+    <h1>
+      jQuery
+    </h1>
+    enter 5 numbers.
+    <form name="numbers">
+      first number//
+      <input type="text" name="num1" size="10" maxlength="10">
+      <br>
+      second number//
+      <input type="text" name="num2" size="10" maxlength="10">
+      <br>
+      third number//
+      <input type="text" name="num3" size="10" maxlength="10">
+      <br>
+      fourth number//
+      <input type="text" name="num4" size="10" maxlength="10">
+      <br>
+      fifth number//
+      <input type="text" name="num5" size="10" maxlength="10">
+      <p>
+        <input type="button" onclick="process()" value="enter">
+        <input type="reset" value="clear">
+        <button type="button">click to fade</button>
+      </p>
+      <textarea name="results" rows="5" cols="50"></textarea>
+    </form>
+    <br>
+    <a href="homework2.html">back to cover</a>
+  </section>
+  <footer>
+    <nav>
+      <p>
+        <a href="#">top</a> .
+        <a href="index.html">cnit133</a> .
+        <a href="cnit132/index.html">cnit132</a> .
+        <a href="mailto:alou1@mail.ccsf.edu">email</a>
+      </p>
+    </nav>
+    <p>
+      <script type="text/javascript">
+        var dateModified = document.lastModified;
+        mydate = dateModified.slice(0,16);
+        document.write("Last updated: " + mydate);
+      </script>
+      <a href="http://validator.w3.org/check?uri=referer"><img src="cnit132/html5.png" height="32" width="32" alt="html5 validate me" title="html5 validate me"></a>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3"><img src="cnit132/css3.png" height="32" width="32" alt="css3 validate me" title="css3 validate me"></a>
+    </p>
+  </footer>
+</body>
+</html>

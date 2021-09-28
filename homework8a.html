@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>
+    alvin lou homework8/part1
+  </title>
+  <link rel="stylesheet" href="main.css">
+  <script>
+    function showHint(str) {
+      if (str.length == 0) { 
+          document.getElementById("txtHint").innerHTML = "";
+          return;
+      }
+      else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+          if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+          }
+        }
+      xmlhttp.open("GET", "gethint.php?q=" + str, true);
+      xmlhttp.send();
+      }
+    }
+</script>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="cnit132/banner.png" width="445" height="69" alt="alvin lou @ ccsf/home" title="alvin lou @ ccsf/home"></a>
+  </header>
+  <nav>
+    <a href="homework1.html">hw1</a> .
+    <a href="homework2.html">hw2</a> .
+    <a href="homework3.html">hw3</a> .
+    <a href="homework4.html">hw4</a> .
+    <a href="homework5.html">hw5</a> .
+    <a href="homework6.html">hw6</a> .
+    <a href="homework7.html">hw7</a> .
+    hw8
+  </nav>
+  <section>
+    <h1>
+      gethint league of legends champion name finder
+    </h1>
+    <p><b>Start typing a name in the input field below:</b></p>
+    <form> 
+      champion name: <input type="text" onkeyup="showHint(this.value)">
+    </form>
+    <p>champion found: <span id="txtHint"></span></p>
+    <p><a href="homework8.html">back to cover</a></p>
+  </section>
+  <footer>
+    <nav>
+      <p>
+        <a href="#">top</a> .
+        <a href="index.html">cnit133</a> .
+        <a href="cnit132/index.html">cnit132</a> .
+        <a href="mailto:alou1@mail.ccsf.edu">email</a>
+      </p>
+    </nav>
+    <p>
+      <script type="text/javascript">
+        var dateModified = document.lastModified;
+        mydate = dateModified.slice(0,16);
+        document.write("Last updated: " + mydate);
+      </script>
+      <a href="http://validator.w3.org/check?uri=referer"><img src="cnit132/html5.png" height="32" width="32" alt="html5 validate me" title="html5 validate me"></a>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3"><img src="cnit132/css3.png" height="32" width="32" alt="css3 validate me" title="css3 validate me"></a>
+    </p>
+  </footer>
+</body>
+</html>

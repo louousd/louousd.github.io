@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>
+    alvin lou homework7/part2
+  </title>
+  <link rel="stylesheet" href="main.css">
+  <style>
+    #styletext {
+      width: 200px;
+      padding: 20px;
+    }
+    .pink {
+      background-color: #ff99ff;
+    }
+    .white {
+      background-color: #ffffff;
+    }
+    .lightblue {
+      background-color: #66ffff;
+    }
+    .small {
+      font-size: 8px;
+    }
+    .medium {
+      font-size: 12px;
+    }
+    .large {
+      font-size: 24px;
+    }
+    .verdana {
+      font-family: verdana;
+    }
+    .tahoma {
+      font-family: tahoma;
+    }
+    .trebuchet {
+      font-family: trebuchet ms;
+    }
+    .italics {
+      font-style: italic;
+    }
+    .bold {
+      font-weight: bold;
+    }
+    .normal {
+      font-weight: normal;
+    }
+  </style>
+  <script>
+    function bgc(color) {
+      var text = document.getElementById("styletext");
+      if (color == 1) {
+        text.className = "pink";
+      }
+      else if (color == 2) {
+        text.className = "white";
+      }
+      else if (color == 3) {
+        text.className = "lightblue";
+      }
+    }
+
+    function fontsize() {
+      var text = document.getElementById("styletext");
+      var size = document.getElementById("fontSize").value;
+      if (size == "small") {
+        text.className = "small";
+      }
+      else if (size == "medium") {
+        text.className = "medium";
+      }
+      else if (size == "large") {
+        text.className = "large";
+      }
+    }
+
+    function verdana() {
+      var text = document.getElementById("styletext");
+      text.className = "verdana";
+    }
+
+    function tahoma() {
+      var text = document.getElementById("styletext");
+      text.className = "tahoma";
+    }
+
+    function trebuchet() {
+      var text = document.getElementById("styletext");
+      text.className = "trebuchet";
+    }
+
+    function italicize() {
+      var text = document.getElementById("styletext");
+      text.className = "italics";
+    }
+
+    function bold() {
+      var text = document.getElementById("styletext");
+      text.className = "bold";
+    }
+
+    function normal() {
+      var text = document.getElementById("styletext");
+      text.className = "normal";
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="cnit132/banner.png" width="445" height="69" alt="alvin lou @ ccsf/home" title="alvin lou @ ccsf/home"></a>
+  </header>
+  <nav>
+    <a href="homework1.html">hw1</a> .
+    <a href="homework2.html">hw2</a> .
+    <a href="homework3.html">hw3</a> .
+    <a href="homework4.html">hw4</a> .
+    <a href="homework5.html">hw5</a> .
+    <a href="homework6.html">hw6</a> .
+    hw7 .
+    <a href="homework8.html">hw8</a>
+  </nav>
+  <section>
+    <h1>
+      style changer
+    </h1>
+      <form>
+        background color<br>
+        <input type="radio" name="color" onclick="bgc(1);">pink<br>
+        <input type="radio" name="color" onclick="bgc(2);">white<br>
+        <input type="radio" name="color" onclick="bgc(3);">light blue<br>
+        <br>font size<br>
+        <select name="fontSize" id="fontSize" onchange="fontsize()">
+          <option value="" selected="selected">pick a size</option>
+          <option value="small">8 px</option>
+          <option value="medium">16 px</option>
+          <option value="large">24 px</option>
+        </select>
+        <br><br>font family<br>
+        <input type="button" value="verdana" onClick="verdana()">
+        <input type="button" value="tahoma" onClick="tahoma()">
+        <input type="button" value="trebuchet" onClick="trebuchet()">
+        <br><br>font style and weight<br>
+        <input type="button" value="italicize" onclick="italicize()">
+        <input type="button" value="bold" onclick="bold()">
+        <input type="button" value="normal" onclick="normal()">
+      </form>
+      <div id="styletext">
+        i wish today was sunday<br>
+        so i could get a cheeseburger for<br>
+        39 cent<br>
+        at mcdonalds... baby<br>
+        and i<br>
+        wish it was wednesday<br>
+        so i can get a hamburger for<br>
+        29 cent<br>
+        at mcdonalds... baby
+      </div>
+    <p>
+      <a href="homework7.html">back to cover</a>
+    </p>
+  </section>
+  <footer>
+    <nav>
+      <p>
+        <a href="#">top</a> .
+        <a href="index.html">cnit133</a> .
+        <a href="cnit132/index.html">cnit132</a> .
+        <a href="mailto:alou1@mail.ccsf.edu">email</a>
+      </p>
+    </nav>
+    <p>
+      <script type="text/javascript">
+        var dateModified = document.lastModified;
+        mydate = dateModified.slice(0,16);
+        document.write("Last updated: " + mydate);
+      </script>
+      <a href="http://validator.w3.org/check?uri=referer"><img src="cnit132/html5.png" height="32" width="32" alt="html5 validate me" title="html5 validate me"></a>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3"><img src="cnit132/css3.png" height="32" width="32" alt="css3 validate me" title="css3 validate me"></a>
+    </p>
+  </footer>
+</body>
+</html>

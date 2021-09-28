@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>
+    alvin lou homework4/part2
+  </title>
+  <link rel="stylesheet" href="main.css">
+  <style>
+    input {text-align: right;}
+  </style>
+  <script>
+    function getPay(hours, rate) {
+      var reg, ot;
+      if (hours > 40) {
+        reg = 40 * rate;
+        ot = (hours - 40) * (1.5 * rate);
+        return reg + ot;
+      }
+      else {
+        return hours * rate;
+      }
+    }
+    function process() {
+      var hours1, hours2, hours3, hours4, hours5, hours6, rate1, rate2, rate3, rate4, rate5, rate6;
+      hours1 = parseInt(document.emppay.hours1.value);
+      hours2 = parseInt(document.emppay.hours2.value);
+      hours3 = parseInt(document.emppay.hours3.value);
+      hours4 = parseInt(document.emppay.hours4.value);
+      hours5 = parseInt(document.emppay.hours5.value);
+      hours6 = parseInt(document.emppay.hours6.value);
+      rate1 = parseFloat(document.emppay.rate1.value);
+      rate2 = parseFloat(document.emppay.rate2.value);
+      rate3 = parseFloat(document.emppay.rate3.value);
+      rate4 = parseFloat(document.emppay.rate4.value);
+      rate5 = parseFloat(document.emppay.rate5.value);
+      rate6 = parseFloat(document.emppay.rate6.value);
+      var errMsg1 = "<span style='font-weight: bold; color: red; '>please enter valid numbers for hours worked</span>";
+      var errMsg2 = "<span style='font-weight: bold; color: red; '>please enter valid numbers for hourly pay</span>";
+
+      if (hours1 < 0 || hours2 < 0 || hours3 < 0 || hours4 < 0 || hours5 < 0 || hours6 < 0 || isNaN(hours1) || isNaN(hours2) ||
+          isNaN(hours3) || isNaN(hours4) || isNaN(hours5) || isNaN(hours6)) {
+        document.getElementById("errMsg").innerHTML = errMsg1;
+      }
+      else if (rate1 < 0 || rate2 < 0 || rate3 < 0 || rate4 < 0 || rate5 < 0 || rate6 < 0 || isNaN(rate1) || isNaN(rate2) ||
+               isNaN(rate3) || isNaN(rate4) || isNaN(rate5) || isNaN(rate6)) {
+        document.getElementById("errMsg").innerHTML = errMsg2;
+      }
+      else {
+        document.getElementById("errMsg").innerHTML = "";
+        document.emppay.pay1.value = (getPay(hours1, rate1).toFixed(2));
+        document.emppay.pay2.value = (getPay(hours2, rate2).toFixed(2));
+        document.emppay.pay3.value = (getPay(hours3, rate3).toFixed(2));
+        document.emppay.pay4.value = (getPay(hours4, rate4).toFixed(2));
+        document.emppay.pay5.value = (getPay(hours5, rate5).toFixed(2));
+        document.emppay.pay6.value = (getPay(hours6, rate6).toFixed(2));
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="cnit132/banner.png" width="445" height="69" alt="alvin lou @ ccsf/home" title="alvin lou @ ccsf/home"></a>
+  </header>
+  <nav>
+    <a href="homework1.html">hw1</a> .
+    <a href="homework2.html">hw2</a> .
+    <a href="homework3.html">hw3</a> .
+    hw4 .
+    <a href="homework5.html">hw5</a> .
+    <a href="homework6.html">hw6</a> .
+    <a href="homework7.html">hw7</a> .
+    <a href="homework8.html">hw8</a>
+  </nav>
+  <section>
+    <h1>
+      employee pay
+    </h1>
+    <p>
+      enter the amount of hours worked for each employee and their hourly rate
+    </p>
+    <form name="emppay">
+      <table>
+        <tr>
+          <th>
+            employee
+          </th>
+          <th>
+            hours worked
+          </th>
+          <th>
+            hourly rate
+          </th>
+          <th>
+            gross pay
+          </th>
+        </tr>
+        <tr>
+          <td>
+            employee 1
+          </td>
+          <td>
+            <input type="text" name="hours1">
+          </td>
+          <td>
+            <input type="text" name="rate1">
+          </td>
+          <td>
+            <input type="text" name="pay1">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            employee 2
+          </td>
+          <td>
+            <input type="text" name="hours2">
+          </td>
+          <td>
+            <input type="text" name="rate2">
+          </td>
+          <td>
+            <input type="text" name="pay2">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            employee 3
+          </td>
+          <td>
+            <input type="text" name="hours3">
+          </td>
+          <td>
+            <input type="text" name="rate3">
+          </td>
+          <td>
+            <input type="text" name="pay3">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            employee 4
+          </td>
+          <td>
+            <input type="text" name="hours4">
+          </td>
+          <td>
+            <input type="text" name="rate4">
+          </td>
+          <td>
+            <input type="text" name="pay4">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            employee 5
+          </td>
+          <td>
+            <input type="text" name="hours5">
+          </td>
+          <td>
+            <input type="text" name="rate5">
+          </td>
+          <td>
+            <input type="text" name="pay5">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            employee 6
+          </td>
+          <td>
+            <input type="text" name="hours6">
+          </td>
+          <td>
+            <input type="text" name="rate6">
+          </td>
+          <td>
+            <input type="text" name="pay6">
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <input type="button" value="enter" onclick="process()">
+            <input type="reset" value="clear" onclick="location.reload()">
+          </td>
+        </tr>
+      </table>
+    </form>
+    <div id="errMsg"></div>
+    <p>
+      <a href="homework4.html">back to cover</a>
+    </p>
+  </section>
+  <footer>
+    <nav>
+      <p>
+        <a href="#">top</a> .
+        <a href="index.html">cnit133</a> .
+        <a href="cnit132/index.html">cnit132</a> .
+        <a href="mailto:alou1@mail.ccsf.edu">email</a>
+      </p>
+    </nav>
+    <p>
+      <script type="text/javascript">
+        var dateModified = document.lastModified;
+        mydate = dateModified.slice(0,16);
+        document.write("Last updated: " + mydate);
+      </script>
+      <a href="http://validator.w3.org/check?uri=referer"><img src="cnit132/html5.png" height="32" width="32" alt="html5 validate me" title="html5 validate me"></a>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3"><img src="cnit132/css3.png" height="32" width="32" alt="css3 validate me" title="css3 validate me"></a>
+    </p>
+  </footer>
+</body>
+</html>
